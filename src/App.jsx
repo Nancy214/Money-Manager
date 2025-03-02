@@ -1,16 +1,9 @@
 import { useState } from 'react';
-import './index.css';
-import { Button } from './components/ui/button';
-
-function App() {
+import HomePage from './app-components/HomePage';
+export default function ExpenseTracker() {
   return (
-    <div className='flex flex-col items-center justify-center min-h-svh'>
-      <h1 className='text-3xl font-bold underline'>
-        Hello World
-      </h1>
-      <Button>Click me</Button>
-    </div>
+    <>
+      <HomePage />
+    </>
   );
 }
-
-export default App;
