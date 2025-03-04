@@ -118,10 +118,11 @@ const HomePage = () => {
     initialBalance - totalExpense;
 
   return (
-    <div className='p-6 space-y-4 max-w-5xl mx-auto'>
+    <div className='p-6 space-y-4 max-w-4xl mx-auto'>
       <h1 className='text-2xl font-bold text-center'>
         Expense Tracker
       </h1>
+
       <div className='flex justify-between space-x-4'>
         <Card className='w-1/2'>
           <CardContent
