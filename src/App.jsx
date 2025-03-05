@@ -1,14 +1,23 @@
 import { useState } from 'react';
-import HomePage from './app-components/HomePage';
-import { MainLayout } from './app-components/MainLayout';
-import { SidebarProvider } from './components/ui/sidebar';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+import { AppSidebar } from './app-components/AppSidebar';
+import { SidebarProvider } from '@/components/ui/sidebar';
+import AppRoutes from './app-components/AppRoutes';
 
 export default function ExpenseTracker() {
   return (
-    <SidebarProvider defaultOpen={true}>
-      <MainLayout>
-        <HomePage />
-      </MainLayout>
-    </SidebarProvider>
+    <>
+      <BrowserRouter>
+        <SidebarProvider defaultOpen={true}>
+          <AppSidebar />
+          <AppRoutes />
+        </SidebarProvider>
+      </BrowserRouter>
+    </>
   );
 }

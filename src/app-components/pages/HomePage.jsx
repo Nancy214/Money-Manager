@@ -2,15 +2,15 @@ import { useState } from 'react';
 import {
   Card,
   CardContent,
-} from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+} from '../../components/ui/card';
+import { Button } from '../../components/ui/button';
+import { Input } from '../../components/ui/input';
 import {
   Alert,
   AlertTitle,
   AlertDescription,
-} from '../components/ui/alert';
-import { ExpenseDataTable } from './ExpenseDataTable';
+} from '../../components/ui/alert';
+import { ExpenseDataTable } from '../ExpenseDataTable';
 import {
   Dialog,
   DialogContent,
@@ -18,7 +18,7 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogFooter,
-} from '../components/ui/dialog';
+} from '../../components/ui/dialog';
 
 const cardHeaderClass = 'pt-2';
 const HomePage = () => {
@@ -118,7 +118,7 @@ const HomePage = () => {
     initialBalance - totalExpense;
 
   return (
-    <div className='p-6 space-y-4 max-w-4xl mx-auto'>
+    <div className='p-6 space-y-4 mx-auto'>
       <h1 className='text-2xl font-bold text-center'>
         Expense Tracker
       </h1>
@@ -151,9 +151,7 @@ const HomePage = () => {
       </div>
       <Dialog>
         <DialogTrigger asChild>
-          <Button className='w-full'>
-            Add New Expense
-          </Button>
+          <Button>Add New Expense</Button>
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
